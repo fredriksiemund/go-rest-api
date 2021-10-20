@@ -75,9 +75,9 @@ func getAlbums(w http.ResponseWriter, req *http.Request) {
 			artist string
 		)
 
-		log.Println("Parsing album " + title + " by " + artist)
-
 		err = rows.Scan(&id, &title, &artist)
+
+		log.Println("Parsing album " + title + " by " + artist)
 
 		checkErr(err)
 
