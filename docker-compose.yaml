@@ -1,0 +1,26 @@
+version: "3.8"  # optional since v1.27.0
+
+services:
+  db: # Name of service. Can be used to access this from pgadmin (instead of ip-address)
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: goplay
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d # Initialize db with data in this folder
+      # Backup db (not working):
+      # - db-data:/var/lib/postgresql/data/
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+# volumes:
+#   db-data:
