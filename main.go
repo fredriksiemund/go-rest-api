@@ -15,7 +15,7 @@ import (
 const (
 	DB_USER     = "root"
 	DB_PASSWORD = "root"
-	DB_NAME     = "goplay"
+	DB_NAME     = "root"
 )
 
 type response struct {
