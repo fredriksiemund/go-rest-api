@@ -10,6 +10,6 @@ INSERT INTO albums (
     artist
 )
 VALUES
-    ("American Idiot", "Green Day"),
-    ("Lemon Tree ", "Fool's Garden"),
-    ("Come Away With Me", "Norah Jones");
+    ('American Idiot', 'Green Day'),
+    ('Lemon Tree ', 'Fools Garden'),
+    ('Come Away With Me', 'Norah Jones');
